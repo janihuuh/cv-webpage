@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(textutil:*)",
+      "Bash(pandoc:*)",
+      "Bash(unzip:*)",
+      "Bash(ls:*)",
+      "Bash(sphinx-build:*)",
+      "WebFetch(domain:emdann.github.io)",
+      "Bash(open:*)"
+    ]
+  }
+}

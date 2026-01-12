@@ -1,0 +1,64 @@
+/* Custom styles for CV page */
+
+.content-icon-container {
+    display: none !important;
+}
+
+/* Profile section styling */
+.profile-section {
+    display: flex;
+    align-items: flex-start;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.profile-photo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* Social links */
+.social-links {
+    display: flex;
+    gap: 1rem;
+    margin: 1rem 0;
+}
+
+.social-links a {
+    color: var(--color-foreground-secondary);
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+.social-links a:hover {
+    color: var(--color-brand-primary);
+}
+
+/* Section styling */
+h2 {
+    border-bottom: 2px solid var(--color-brand-primary);
+    padding-bottom: 0.5rem;
+    margin-top: 2.5rem;
+}
+
+/* Publication list */
+.publication-list {
+    font-size: 0.95rem;
+}
+
+.publication-list li {
+    margin-bottom: 0.8rem;
+}
+
+/* Centered content */
+.main-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Hide toctree */
+.toctree-wrapper {
+    display: none;
+}

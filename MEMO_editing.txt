@@ -1,0 +1,88 @@
+====================================
+HOW TO EDIT YOUR CV WEBSITE
+====================================
+
+FILE TO EDIT
+------------
+The main content file is:
+
+    cv_webpage/index.rst
+
+IMPORTANT: The file extension is .rst (not .rst.txt)
+If your editor adds .txt, rename it back to just .rst
+
+
+EDITING THE CONTENT
+-------------------
+The file uses reStructuredText format. Basic syntax:
+
+1. HEADINGS
+   Main heading (with equals signs below):
+
+       Section Title
+       =============
+
+   Subheading (with dashes below):
+
+       Subsection
+       ----------
+
+2. BOLD TEXT
+   Use double asterisks:
+
+       **This is bold**
+
+3. ITALIC TEXT
+   Use single asterisks:
+
+       *This is italic*
+
+4. BULLET LISTS
+   Use dashes with spaces:
+
+       - First item
+       - Second item
+       - Third item
+
+5. LINKS
+   Format: `Link Text <https://url.com>`_
+
+       `Google Scholar <https://scholar.google.com>`_
+
+6. NUMBERED LISTS
+   Use numbers with periods:
+
+       1. First item
+       2. Second item
+
+
+REBUILDING AFTER EDITS
+----------------------
+After saving your changes, open Terminal and run:
+
+    cd "/Users/j.huuhtanen/HRUH Dropbox/Jani Huuhtanen/cv_webpage"
+    sphinx-build -b html . _build/html
+    open _build/html/index.html
+
+
+FILE STRUCTURE
+--------------
+cv_webpage/
+    index.rst           <-- EDIT THIS (main content)
+    conf.py             <-- Theme settings, colors
+    _static/
+        custom.css      <-- Custom styling
+        profile.png     <-- Your photo
+    _build/html/        <-- Generated site (DO NOT EDIT)
+
+
+CHANGING COLORS
+---------------
+Edit conf.py and modify the "light_css_variables" section.
+Current color scheme uses warm beige tones.
+
+
+CHANGING YOUR PHOTO
+-------------------
+Replace _static/profile.png with your new image.
+Keep the same filename, or update index.rst to match.

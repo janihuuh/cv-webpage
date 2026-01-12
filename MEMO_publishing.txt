@@ -1,0 +1,84 @@
+====================================
+HOW TO PUBLISH YOUR CV WEBSITE
+====================================
+
+OPTION 1: GITHUB PAGES (Free, Recommended)
+------------------------------------------
+
+Step 1: Create a GitHub account (if you don't have one)
+    Go to https://github.com and sign up
+
+Step 2: Create a new repository
+    - Click "New repository"
+    - Name it: janihuuhtanen.github.io (or any name)
+    - Make it Public
+    - Click "Create repository"
+
+Step 3: Upload your site files
+    In Terminal, run:
+
+    cd "/Users/j.huuhtanen/HRUH Dropbox/Jani Huuhtanen/cv_webpage/_build/html"
+    git init
+    git add .
+    git commit -m "Initial CV website"
+    git branch -M main
+    git remote add origin https://github.com/YOUR_USERNAME/YOUR_REPO_NAME.git
+    git push -u origin main
+
+Step 4: Enable GitHub Pages
+    - Go to your repository on GitHub
+    - Click "Settings" > "Pages"
+    - Under "Source", select "Deploy from a branch"
+    - Select "main" branch and "/ (root)" folder
+    - Click "Save"
+
+Step 5: Access your site
+    Your site will be live at:
+    https://YOUR_USERNAME.github.io/YOUR_REPO_NAME/
+
+    (May take 1-2 minutes to deploy)
+
+
+UPDATING YOUR SITE
+------------------
+After making changes to index.rst:
+
+    cd "/Users/j.huuhtanen/HRUH Dropbox/Jani Huuhtanen/cv_webpage"
+    sphinx-build -b html . _build/html
+    cd _build/html
+    git add .
+    git commit -m "Update CV"
+    git push
+
+
+OPTION 2: NETLIFY (Free, Very Easy)
+-----------------------------------
+
+Step 1: Go to https://www.netlify.com and sign up
+
+Step 2: Drag and drop
+    - Click "Add new site" > "Deploy manually"
+    - Drag your _build/html folder into the browser
+    - Done! You get a random URL like https://random-name.netlify.app
+
+Step 3: Custom domain (optional)
+    - In site settings, you can set a custom subdomain
+    - Or connect your own domain
+
+
+OPTION 3: CUSTOM DOMAIN
+-----------------------
+If you own a domain (e.g., janihuuhtanen.com):
+
+1. Use GitHub Pages or Netlify as above
+2. In your domain registrar (e.g., Namecheap, GoDaddy):
+   - Add a CNAME record pointing to your GitHub/Netlify URL
+3. In GitHub Pages settings or Netlify:
+   - Add your custom domain
+
+
+QUICK REFERENCE
+---------------
+Build site:     sphinx-build -b html . _build/html
+Preview:        open _build/html/index.html
+Upload folder:  _build/html (contains all files to publish)
